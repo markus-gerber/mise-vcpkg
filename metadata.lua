@@ -5,5 +5,4 @@ PLUGIN = { -- luacheck: ignore
     author = "markus-gerber",
     updateUrl = "https://github.com/markus-gerber/mise-vcpkg",
     minRuntimeVersion = "0.2.0",
-    depends = { "git" },
 }

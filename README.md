@@ -8,6 +8,18 @@ The plugin provides `vcpkg` through the following steps:
 2. Download the vcpkg tool using the appropriate script (e.g., `bootstrap-vcpkg.sh` on Linux)
 3. Add vcpkg to the system `PATH`, and set the `VCPKG_ROOT` environment variable to the installation directory
 
+## Requirements
+
+Ensure `git` is installed and available in your system's PATH.
+
+## Installation
+
+To install the plugin, run:
+
+```bash
+mise plugin install vcpkg https://github.com/markus-gerber/mise-vcpkg
+```
+
 ## Development Workflow
 
 ### Setting up development environment
