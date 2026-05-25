@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#MISE description="Run plugin tests - install and execute tool"
+set -euo pipefail
+
+mise plugin link --force vcpkg .
+mise cache clear
+mise install vcpkg@2026.04.27
+
+# Capture and display the output while also verifying it
+output=$(mise exec "vcpkg@2026.04.27" -- vcpkg --version)
+echo "vcpkg output: $output"
+
+if echo "$output" | grep -q 'vcpkg package management program version 2026-04-08'; then
+    echo "✓ Tests passed"
+else
+    echo "✗ Test failed: expected tool version 2026-04-08"
+    exit 1
+fi
